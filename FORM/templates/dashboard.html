@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #2c3e50;
+            color: #ecf0f1;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .dashboard-container {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: row;
+            background-color: #34495e;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #1a242f;
+            padding: 20px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 2px 0 12px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar a {
+            text-decoration: none;
+            color: #ecf0f1;
+            font-size: 18px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+        .sidebar a:hover {
+            color: #3498db;
+        }
+        .main-content {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .welcome-message {
+            font-size: 36px;
+            font-weight: 600;
+            color: #ecf0f1;
+            margin-bottom: 30px;
+        }
+        .btn-logout {
+            background-color: #e74c3c;
+            color: white;
+            font-size: 16px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn-logout:hover {
+            background-color: #c0392b;
+        }
+        .btn-logout:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="dashboard-container">
+    <div class="sidebar">
+        <h3 style="color: #ecf0f1; font-size: 24px;">Dashboard</h3>
+    </div>
+    <div class="main-content">
+        <div class="welcome-message">Welcome to the Dashboard</div>
+        <a href="{% url 'logout' %}" class="btn-logout">Logout</a>
+    </div>
+</div>
+
+</body>
+</html>
